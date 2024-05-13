@@ -1,0 +1,48 @@
+version: '3.3'
+
+services:
+    application:
+        container_name: application
+        image: node:16
+        stdin_open: true
+        tty: true
+        working_dir: /CODE
+        env_file:
+            - ../.env
+        restart: unless-stopped
+        networks:
+            - application_network
+
+    # postgres:
+    #     container_name: db_postgres
+    #     image: postgres
+    #     restart: unless-stopped
+    #     ports:
+    #         - '5432:5432'
+    #     env_file:
+    #         - ../.env
+    #     volumes:
+    #         - application_postgresql_db:/var/lib/postgresql/data
+    #     networks:
+    #         - application_network
+
+    # mongo:
+    #     container_name: db_mongo
+    #     image: mongo
+    #     restart: unless-stopped
+    #     ports:
+    #         - '27017:27017'
+    #     env_file:
+    #         - ../.env
+    #     volumes:
+    #         - application_mongo_db:/data/db
+    #     networks:
+    #         - application_network
+
+volumes:
+    # application_mongo_db:
+    # application_postgresql_db:
+    application_files:
+
+networks:
+    application_network:

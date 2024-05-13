@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+    application:
+        extends:
+            file: docker-compose-base.yml
+            service: application
+        command: >
+            bash -c "npm run start-prod"
+
+    # postgres:
+    #     extends:
+    #         file: docker-compose-base.yml
+    #         service: postgres
+    
+    # mongo:
+    #     extends:
+    #         file: docker-compose-base.yml
+    #         service: mongo
+
+volumes:
+    # application_mongo_db:
+    # application_postgresql_db:
+    application_files:
+
+networks:
+    application_network:

@@ -1,0 +1,18 @@
+{
+  "name": "typescript-template",
+  "version": "1.0.0",
+  "description": "Template for typescript projects.",
+  "scripts": {
+    "start-dev": "ts-node src/main.ts",
+    "start-prod": "node build/main.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergio Alvarez Medina",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "prettier":"^3.2.5"
+  }
+}
