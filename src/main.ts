@@ -1,3 +1,5 @@
-import Discord from 'discord.js';
+import { client, initialize_discord_client } from './discord_client';
+import { load_environment_variables } from './environment';
 
-const client = new Discord.Client({ intents: [] });
+load_environment_variables();
+initialize_discord_client(client, process.env.DISCORD_TOKEN!);
