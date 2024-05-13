@@ -20,7 +20,7 @@ services:
 volumes:
     # application_mongo_db:
     # application_postgresql_db:
-    application_files:
+    # application_files:
 
 networks:
     application_network:
