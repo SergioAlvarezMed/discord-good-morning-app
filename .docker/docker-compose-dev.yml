@@ -9,7 +9,7 @@ services:
               source: ../
               target: /CODE
         command: >
-            bash -c "npm run start-dev"
+            bash -c "npm i && npm run start-dev"
 
     # postgres:
     #     extends:
@@ -21,7 +21,7 @@ services:
     #         file: docker-compose-base.yml
     #         service: mongo
 
-volumes:
+# volumes:
     # application_mongo_db:
     # application_postgresql_db:
     # application_files:

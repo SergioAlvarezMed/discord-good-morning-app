@@ -39,7 +39,7 @@ services:
     #     networks:
     #         - application_network
 
-volumes:
+# volumes:
     # application_mongo_db:
     # application_postgresql_db:
     # application_files:
