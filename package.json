@@ -12,12 +12,15 @@
     "author": "Sergio Alvarez Medina",
     "license": "ISC",
     "devDependencies": {
+        "@types/pg": "^8.11.6",
         "prettier": "^3.2.5",
         "ts-node": "^10.9.2",
         "typescript": "^5.4.5"
     },
     "dependencies": {
+        "axios": "^1.7.0",
         "discord.js": "^14.15.2",
-        "dotenv": "^16.4.5"
+        "dotenv": "^16.4.5",
+        "pg": "^8.11.5"
     }
 }

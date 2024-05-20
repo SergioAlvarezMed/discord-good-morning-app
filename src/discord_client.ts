@@ -5,9 +5,9 @@ const client = new Discord.Client({
         Discord.GatewayIntentBits.Guilds,
         Discord.GatewayIntentBits.GuildMessages,
         Discord.GatewayIntentBits.MessageContent,
-        Discord.GatewayIntentBits.DirectMessages
+        Discord.GatewayIntentBits.DirectMessages,
     ],
-    partials: [Discord.Partials.Channel]
+    partials: [Discord.Partials.Channel],
 });
 
 function initialize_discord_client(

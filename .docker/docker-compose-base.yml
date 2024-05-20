@@ -13,18 +13,18 @@ services:
         networks:
             - application_network
 
-    # postgres:
-    #     container_name: db_postgres
-    #     image: postgres
-    #     restart: unless-stopped
-    #     ports:
-    #         - '5432:5432'
-    #     env_file:
-    #         - ../.env
-    #     volumes:
-    #         - application_postgresql_db:/var/lib/postgresql/data
-    #     networks:
-    #         - application_network
+    postgres:
+        container_name: db_postgres
+        image: postgres
+        restart: unless-stopped
+        ports:
+            - '5433:5432'
+        env_file:
+            - ../.env
+        volumes:
+            - application_postgresql_db:/var/lib/postgresql/data
+        networks:
+            - application_network
 
     # mongo:
     #     container_name: db_mongo
@@ -39,10 +39,10 @@ services:
     #     networks:
     #         - application_network
 
-# volumes:
+volumes:
     # application_mongo_db:
-    # application_postgresql_db:
-    # application_files:
+    application_postgresql_db:
+# application_files:
 
 networks:
     application_network:
