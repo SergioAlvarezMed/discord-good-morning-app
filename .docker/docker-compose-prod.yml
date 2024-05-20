@@ -9,7 +9,7 @@ services:
               source: ../
               target: /CODE
         command: >
-            bash -c "npm i && npm run start-prod"
+            bash -c "npm i && npm run build && npm run start-prod"
 
     gm-app-postgres:
         extends:
