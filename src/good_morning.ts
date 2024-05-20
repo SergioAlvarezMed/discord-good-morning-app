@@ -81,5 +81,5 @@ export function initialize_good_mornings() {
         console.log(`Current time in Chile: ${chilean_hour}:${chilean_minute}`);
 
         check_and_send_mornings(chile_date, chilean_hour, chilean_minute);
-    }, 30 * 1000);  // check every 30 seconds
+    }, 120 * 1000);  // check every 2 minutes
 }
