@@ -1,11 +1,11 @@
 import { Client } from 'pg';
 
 const client = new Client({
-    user: 'postgres',
-    password: '12345',
-    host: 'db_postgres',
+    user: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD,
+    host: 'gm-app-postgres',
     port: 5432,
-    database: 'GoodMorning',
+    database: process.env.POSTGRES_DB,
 });
 
 client
