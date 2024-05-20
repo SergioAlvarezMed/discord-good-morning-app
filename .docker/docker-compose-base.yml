@@ -1,8 +1,8 @@
 version: '3.3'
 
 services:
-    application:
-        container_name: application
+    gm-app:
+        container_name: gm-app
         image: node:18.12.1
         stdin_open: true
         tty: true
@@ -11,10 +11,10 @@ services:
             - ../.env
         restart: unless-stopped
         networks:
-            - application_network
+            - gm-app-network
 
-    postgres:
-        container_name: db_postgres
+    gm-app-postgres:
+        container_name: gm-app-postgres
         image: postgres
         restart: unless-stopped
         ports:
@@ -22,9 +22,9 @@ services:
         env_file:
             - ../.env
         volumes:
-            - application_postgresql_db:/var/lib/postgresql/data
+            - gm-app-postgresql-db:/var/lib/postgresql/data
         networks:
-            - application_network
+            - gm-app-network
 
     # mongo:
     #     container_name: db_mongo
@@ -41,8 +41,8 @@ services:
 
 volumes:
     # application_mongo_db:
-    application_postgresql_db:
+    gm-app-postgresql-db:
 # application_files:
 
 networks:
-    application_network:
+    gm-app-network:

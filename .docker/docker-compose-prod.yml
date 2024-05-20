@@ -1,9 +1,9 @@
 version: '3.3'
 services:
-    application:
+    gm-app:
         extends:
             file: docker-compose-base.yml
-            service: application
+            service: gm-app
         volumes:
             - type: bind
               source: ../
@@ -11,10 +11,10 @@ services:
         command: >
             bash -c "npm i && npm run start-prod"
 
-    postgres:
+    gm-app-postgresql:
         extends:
             file: docker-compose-base.yml
-            service: postgres
+            service: gm-app-postgresql
 
     # mongo:
     #     extends:
@@ -23,8 +23,8 @@ services:
 
 volumes:
     # application_mongo_db:
-    application_postgresql_db:
+    gm-app-postgresql-db:
 # application_files:
 
 networks:
-    application_network:
+    gm-app-network:
