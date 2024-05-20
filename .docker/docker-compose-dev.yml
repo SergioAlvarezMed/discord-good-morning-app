@@ -23,7 +23,7 @@ services:
 
 volumes:
     # application_mongo_db:
-    gm-app-postgresql-db:
+    gm-app-postgres-db:
 # application_files:
 
 networks:

@@ -11,10 +11,10 @@ services:
         command: >
             bash -c "npm i && npm run start-prod"
 
-    gm-app-postgresql:
+    gm-app-postgres:
         extends:
             file: docker-compose-base.yml
-            service: gm-app-postgresql
+            service: gm-app-postgres
 
     # mongo:
     #     extends:
@@ -23,7 +23,7 @@ services:
 
 volumes:
     # application_mongo_db:
-    gm-app-postgresql-db:
+    gm-app-postgres-db:
 # application_files:
 
 networks:

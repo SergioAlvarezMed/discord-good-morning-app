@@ -22,7 +22,7 @@ services:
         env_file:
             - ../.env
         volumes:
-            - gm-app-postgresql-db:/var/lib/postgresql/data
+            - gm-app-postgres-db:/var/lib/postgresql/data
         networks:
             - gm-app-network
 
@@ -41,7 +41,7 @@ services:
 
 volumes:
     # application_mongo_db:
-    gm-app-postgresql-db:
+    gm-app-postgres-db:
 # application_files:
 
 networks:
