@@ -3,7 +3,7 @@ version: '3.3'
 services:
     application:
         container_name: application
-        image: node:16
+        image: node:18.12.1
         stdin_open: true
         tty: true
         working_dir: /CODE
