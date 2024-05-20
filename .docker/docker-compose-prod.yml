@@ -4,8 +4,12 @@ services:
         extends:
             file: docker-compose-base.yml
             service: application
+        volumes:
+            - type: bind
+              source: ../
+              target: /CODE
         command: >
-            bash -c "npm run start-prod"
+            bash -c "npm i && npm run start-prod"
 
     postgres:
         extends:
