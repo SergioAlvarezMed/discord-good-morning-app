@@ -35,4 +35,9 @@ Before running the project, make sure you have the following:
 
 ## Usage
 
-To start the Discord Good Morning App, run the following command:
+1. To start the Discord Good Morning App, run the following command:
+
+    ```plaintext
+    make up
+    ```
+    
